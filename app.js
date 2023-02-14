@@ -16,14 +16,14 @@ tellMeBtn.addEventListener("click", () => {
     const loss = (initPriceValue - currPriceValue) * numOfStocksValue;
     const lossPercentage = ((loss / initPriceValue) * 100).toFixed(2);
     output.style.color = "red";
-    console.log("loss", loss, "lossPercentage", lossPercentage);
+    output.innerText = `Your Loss is ${loss} and loss percentage is ${lossPercentage} %`;
   } else if (initPriceValue < currPriceValue) {
     const profit = (currPriceValue - initPriceValue) * numOfStocksValue;
     const profitPercentage = ((profit / initPriceValue) * 100).toFixed(2);
     output.style.color = "green";
-    console.log("profit", profit, "profitPercentage", profitPercentage);
+    output.innerText = `Your Profit is ${profit} and profit percentage is ${profitPercentage} %`;
   } else {
     output.style.color = "white";
-    console.log("No Pain No Gain");
+    output.innerText = "No Pain No Gain";
   }
 });
